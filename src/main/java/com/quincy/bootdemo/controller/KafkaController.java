@@ -21,7 +21,7 @@ public class KafkaController {
 
     @GetMapping("/send")
     public Object sendMq(String msg) throws ExecutionException, InterruptedException {
-        return kafkaTemplate.send("kafka-topic-test", msg).get().toString();
+        return kafkaTemplate.send("test", msg).get().toString();
     }
 
 }
